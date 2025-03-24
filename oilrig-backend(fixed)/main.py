@@ -1,7 +1,7 @@
 # main.py
 from fastapi import FastAPI
 from db import connect_to_db, close_db
-from routes import reports, read, create, update
+from routes import reports, read, create, update, upload
 
 app = FastAPI()
 
@@ -17,5 +17,6 @@ app.include_router(reports.router)
 app.include_router(read.router)
 app.include_router(create.router)
 app.include_router(update.router)
+app.include_router(upload.router)
 
 
